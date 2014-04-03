@@ -16,3 +16,5 @@ Stage this hunk [y,n,a,d,/,j,J,g,e,?]? ?
 - s - split the current hunk into smaller hunks
 - e - manually edit the current hunk
 - ? - print help
+- 
+If git presents you with a chunk larger than what you would like to add, you can use the "e" interactive command to specify the exact lines that you want added or removed.
