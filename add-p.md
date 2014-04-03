@@ -2,7 +2,7 @@
 
 #### git add -p is basically "git add partial (or patch)"
 
-This feature really improves the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
+Patch mode allows you to stage parts of a changed file, instead of the entire file. This allows you to make concise, well-crafted commits that make for an easier to read history. This feature can improve the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
 
 It allows you to see the changes (delta) to the code that you are trying to add, and lets you add them (or not) separately from each other using an interactive prompt. Here's how to use it: 
 
