@@ -34,3 +34,7 @@ e - Manually edit the hunk. This is probably the most powerful option. As promis
 -----------
 
 ust as the author describes, this feature really improves the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
+
+_____________
+
+FYI `git reset -p` works in a similar way
