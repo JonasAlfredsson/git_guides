@@ -1,4 +1,4 @@
-# here is some stuff
+# git add -p | your friend
 
 From the interactive prompt, type 5 or p (for patch). Git will ask you which files you would like to partially stage; then, for each section of the selected files, it will display hunks of the file diff and ask if you would like to stage them, one by one:
 
