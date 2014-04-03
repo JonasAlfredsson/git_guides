@@ -38,3 +38,6 @@ ust as the author describes, this feature really improves the quality of the com
 _____________
 
 FYI `git reset -p` works in a similar way
+
+___________
+git commit -p it combines git add -p and git commit in one command.
