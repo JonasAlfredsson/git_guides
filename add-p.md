@@ -2,6 +2,8 @@
 
 #### git add -p is basically "git add partial (or patch)"
 
+This feature really improves the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
+
 It allows you to see the changes (delta) to the code that you are trying to add, and lets you add them (or not) separately from each other using an interactive prompt. Here's how to use it: 
 
 from the command line, either use
@@ -11,11 +13,6 @@ from the command line, either use
 Git will ask you which files you would like to partially stage; then, for each section of the selected files, it will display hunks of the file diff and ask if you would like to stage them, one by one:
 
 ![here's a visual](http://i.imgur.com/UbSnkwX.png)
-
-Some cool tips from the internet: 
-
-- If git presents you with a chunk larger than what you would like to add, you can use the "e" interactive command to specify the exact lines that you want added or removed.
-- 
 
 At each point, you will be asked whether you want to "stage this hunk". Here are the commands you can use:
 ####commonly used commands
@@ -36,24 +33,11 @@ At each point, you will be asked whether you want to "stage this hunk". Here are
 - ? - print help
 
 
+#### Some cool tips from the internet: 
 
-_____
+- If git presents you with a chunk larger than what you would like to add, you can use the "e" interactive command to specify the exact lines that you want added or removed. This is probably the most powerful option. As promised, it will open the hunk in a text editor and you can edit it to your hearts content
+- Split the hunk into smaller hunks. This only works if there’s unchanged lines between the changes in the displayed hunk, so this wouldn’t have any effect in the example above
+- git reset -p works in a similar way
+- git commit -p it combines git add -p and git commit in one command.
 
-At the top is some diff info about the current position in the file, followed by the actual diff of the source code (called “hunk”), and below that are your available options. Pressing ? will give you a short explanation for each one, but the ones I use most often are:
 
-y - Yes, add this hunk
-n - No, don’t add this hunk
-d - No, don’t add this hunk and all other remaining hunks. Useful if you’ve already added what you want to, and want to skip over the rest
-s - Split the hunk into smaller hunks. This only works if there’s unchanged lines between the changes in the displayed hunk, so this wouldn’t have any effect in the example above
-e - Manually edit the hunk. This is probably the most powerful option. As promised, it will open the hunk in a text editor and you can edit it to your hearts content
-
------------
-
-ust as the author describes, this feature really improves the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
-
-_____________
-
-FYI `git reset -p` works in a similar way
-
-___________
-git commit -p it combines git add -p and git commit in one command.
