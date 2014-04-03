@@ -30,3 +30,7 @@ n - No, don’t add this hunk
 d - No, don’t add this hunk and all other remaining hunks. Useful if you’ve already added what you want to, and want to skip over the rest
 s - Split the hunk into smaller hunks. This only works if there’s unchanged lines between the changes in the displayed hunk, so this wouldn’t have any effect in the example above
 e - Manually edit the hunk. This is probably the most powerful option. As promised, it will open the hunk in a text editor and you can edit it to your hearts content
+
+-----------
+
+ust as the author describes, this feature really improves the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
