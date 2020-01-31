@@ -4,12 +4,12 @@
 
 Patch mode allows you to stage parts of a changed file, instead of the entire file. This allows you to make concise, well-crafted commits that make for an easier to read history. This feature can improve the quality of the commits. It also makes it easy to remove parts of the changes in a file that were only there for debugging purposes - prior to the commit without having to go back to the editor.
 
-It allows you to see the changes (delta) to the code that you are trying to add, and lets you add them (or not) separately from each other using an interactive prompt. Here's how to use it: 
+It allows you to see the changes (delta) to the code that you are trying to add, and lets you add them (or not) separately from each other using an interactive prompt. Here's how to use it:
 
 from the command line, either use
 - git add -p
-- or you can use git add -i and choose type 5 or p (for patch). 
- 
+- or you can use git add -i and choose type 5 or p (for patch).
+
 Git will ask you which files you would like to partially stage; then, for each section of the selected files, it will display hunks of the file diff and ask if you would like to stage them, one by one:
 
 ![here's a visual](http://i.imgur.com/UbSnkwX.png)
@@ -33,11 +33,9 @@ At each point, you will be asked whether you want to "stage this hunk". Here are
 - ? - print help
 
 
-#### Some cool tips from the internet: 
+#### Some cool tips from the internet:
 
 - If git presents you with a chunk larger than what you would like to add, you can use the "e" interactive command to specify the exact lines that you want added or removed. This is probably the most powerful option. As promised, it will open the hunk in a text editor and you can edit it to your hearts content
 - Split the hunk into smaller hunks. This only works if there’s unchanged lines between the changes in the displayed hunk, so this wouldn’t have any effect in the example above
 - git reset -p works in a similar way
 - git commit -p it combines git add -p and git commit in one command.
-
-
