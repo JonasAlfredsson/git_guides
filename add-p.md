@@ -13,9 +13,12 @@ It allows you to see the changes (delta) to the code that you are trying to
 add, and lets you add them (or not) separately from each other using an
 interactive prompt. Here's how to use it:
 
-from the command line, either use
-- `git add -p`
-- or you can use git `add -i` and choose type `5` or `p` (for patch).
+- `git add -p` (will go through all modified files)
+- `git add -p path/to/file.c` (only look for changes in this file)
+
+or you can use
+
+- `git add -i` and choose type `5` or `p` (for patch).
 
 Git will ask you which files you would like to partially stage; then, for each
 section of the selected files, it will display hunks of the file diff and ask
