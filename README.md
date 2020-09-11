@@ -14,3 +14,6 @@ Anyway, here is a list of the current selection of guides available:
 - [Break Out Specific Files/Directories to a New Git Repository](./docs/extract_branch_new_repo.md)\
   Instructions on how to move just a small subset of files, along with all their
   specific commit history, from a big repository into a separate one.
+- [`git add -p` is your friend](./docs/add-p.md)\
+  A small summary of how to use the command `add -p`, which allows you to only
+  add specific parts of a file to a commit.
